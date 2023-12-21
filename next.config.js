@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    // 静态写入链接
+    typedRoutes: true
+  },
   images: {
     remotePatterns: [
       {
