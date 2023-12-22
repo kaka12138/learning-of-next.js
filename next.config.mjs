@@ -1,5 +1,12 @@
+import remarkGfm from "remark-gfm" // remark plugin
+import createMDX from "@next/mdx"
 // mdx
-const withMDX = require("@next/mdx")()
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkGfm], // 添加markdown插件
+    rehypePlugins: []
+  }
+})
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -19,4 +26,4 @@ const nextConfig = {
     ]
   }
 }
-module.exports = withMDX(nextConfig)
+export default withMDX(nextConfig)
