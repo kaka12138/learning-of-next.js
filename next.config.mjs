@@ -1,9 +1,17 @@
 import remarkGfm from "remark-gfm" // remark plugin
+import remarkFrontmatter from "remark-frontmatter" // remark frontmatter
+import remarkMdxFrontmatter from "remark-mdx-frontmatter" // remark mdx frontmatterr
+
 import createMDX from "@next/mdx"
 // mdx
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkGfm], // 添加markdown插件
+    // 添加markdown插件
+    remarkPlugins: [
+      remarkGfm,
+      [remarkFrontmatter],
+      [remarkMdxFrontmatter]
+    ],
     rehypePlugins: []
   }
 })

@@ -16,7 +16,6 @@ export default function Home() {
       { 
         photos.map((item) => <Link key={item.id} href={`/photos/${item.id}`}><img width="100" src={ item.src }/></Link>) 
       }
-    </div>
-    
+    </div>    
   </>
 }
