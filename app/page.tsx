@@ -10,6 +10,7 @@ export default function Home() {
       <li><Link href="/about">About Page</Link></li>
       <li><Link href="/contact">Contact Page</Link></li>
       <li><Link href="/layoutvstemplate">LayoutvsTemplate Page</Link></li>
+      <li><Link href="/stylepage?name=kaka">rewirte stylepage</Link></li>
     </ul>
     <h2>拦截路由Demo</h2>
     <div className="flex">

@@ -128,6 +128,25 @@ const nextConfig = {
         permanent: true
       }
     ]
+  },
+  // rewrites
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/stylepage",
+          // destination: "/new-contact"
+          destination: "https://www.bilibili.com/video/BV1T5411q7zP/?spm_id_from=333.1007.tianma.4-1-11.click&vd_source=29b27ce1eccd267940d509d762364bcd" // 重写到外部
+        }
+      ],
+      // 增量重写
+      // fallback: [
+      //   {
+      //     source: "/stylepage",
+      //     destination: "https://www.baidu.com/"
+      //   }
+      // ]
+    }
   }
 }
 export default withMDX(nextConfig)
